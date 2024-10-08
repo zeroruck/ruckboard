@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f0f0f0;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+#logoContainer {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transform: rotateX(30deg) rotateY(10deg);
+    perspective: 1000px;
+}
+
+.text {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(
+        to right,
+        #ff0000,
+        #0000ff
+    ); /* Ensure this line is uncommented */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding: 20px;
+    transform: translateZ(30px);
+}
+
+.gradient-control {
+    display: inline-block;
+    margin: 10px;
+}
+
+.dial {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    display: inline-block;
+    background: conic-gradient(
+        from 0deg at center,
+        transparent 0deg,
+        #ccc 360deg
+    );
+}
+
+.knob {
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    touch-action: none;
+}
+
+.knob:active {
+    cursor: grabbing;
+}
+
+/* Reset styles if necessary */
+.text {
+    all: unset; /* Resets all properties */
+    background: linear-gradient(to right, #ff0000, #0000ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3em;
+    font-weight: bold;
+    transform: translateZ(30px);
+}
+
+#downloadButton {
+    margin-top: 10px;
+    padding: 10px 10x;
+    font-size: 1em;
+    cursor: pointer;
+}
